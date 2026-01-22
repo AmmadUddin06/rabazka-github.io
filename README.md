@@ -1,1 +1,694 @@
-# rabazka-github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabazka - Redefining Everyday Style</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p>FREE SHIPPING ON ORDERS ABOVE PKR 3,000 | <a href="#shop">SHOP NOW</a></p>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Logo -->
+            <a href="#home" class="logo">RABAZKA</a>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="#shop" class="nav-link">Shop</a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-content">
+                                <div class="mega-menu-column">
+                                    <h4>Women</h4>
+                                    <ul>
+                                        <li><a href="#shop" data-category="unstitched">Unstitched</a></li>
+                                        <li><a href="#shop" data-category="ready-to-wear">Ready-to-Wear</a></li>
+                                        <li><a href="#shop" data-category="western-wear">Western Wear</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Men & Kids</h4>
+                                    <ul>
+                                        <li><a href="#shop" data-category="menswear">Menswear</a></li>
+                                        <li><a href="#shop" data-category="kidswear">Kidswear</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-column">
+                                    <h4>Collections</h4>
+                                    <ul>
+                                        <li><a href="#shop">New Arrivals</a></li>
+                                        <li><a href="#shop">Best Sellers</a></li>
+                                        <li><a href="#shop">Sale</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-image">
+                                    <div class="mega-menu-promo">
+                                        <span>New Season</span>
+                                        <p>Summer'25 Collection</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <button class="action-btn search-btn" id="searchBtn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                </button>
+                <button class="action-btn wishlist-btn" aria-label="Wishlist">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                </button>
+                <button class="action-btn cart-btn" id="cartBtn" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <path d="M16 10a4 4 0 0 1-8 0"/>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+                <input type="text" placeholder="Search for products..." id="searchInput">
+                <button class="search-close" id="searchClose">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-slider">
+                <div class="hero-slide active">
+                    <div class="hero-image">
+                        <div class="placeholder-bg hero-bg-1"></div>
+                    </div>
+                    <div class="hero-content">
+                        <span class="hero-subtitle">Summer Collection 2025</span>
+                        <h1>Redefining Everyday Style</h1>
+                        <p>Discover affordable luxury in Pakistani fashion. Premium fabrics, timeless designs.</p>
+                        <div class="hero-buttons">
+                            <a href="#shop" class="btn btn-primary">Shop New Arrivals</a>
+                            <a href="#categories" class="btn btn-outline">Explore Collections</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slide">
+                    <div class="hero-image">
+                        <div class="placeholder-bg hero-bg-2"></div>
+                    </div>
+                    <div class="hero-content">
+                        <span class="hero-subtitle">Unstitched Luxury</span>
+                        <h1>Craft Your Own Story</h1>
+                        <p>Premium lawn, cotton & linen fabrics for the modern woman.</p>
+                        <div class="hero-buttons">
+                            <a href="#shop" class="btn btn-primary">Shop Unstitched</a>
+                            <a href="#categories" class="btn btn-outline">View All</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-navigation">
+                <button class="hero-nav-btn prev" id="heroPrev">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="15 18 9 12 15 6"/>
+                    </svg>
+                </button>
+                <div class="hero-dots">
+                    <button class="hero-dot active" data-slide="0"></button>
+                    <button class="hero-dot" data-slide="1"></button>
+                </div>
+                <button class="hero-nav-btn next" id="heroNext">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="9 18 15 12 9 6"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Category Strip -->
+        <section class="category-strip">
+            <div class="container">
+                <div class="category-strip-list">
+                    <a href="#shop" class="category-strip-item" data-category="unstitched">
+                        <span>Unstitched</span>
+                    </a>
+                    <a href="#shop" class="category-strip-item" data-category="ready-to-wear">
+                        <span>Ready-to-Wear</span>
+                    </a>
+                    <a href="#shop" class="category-strip-item" data-category="western-wear">
+                        <span>Western</span>
+                    </a>
+                    <a href="#shop" class="category-strip-item" data-category="menswear">
+                        <span>Men</span>
+                    </a>
+                    <a href="#shop" class="category-strip-item" data-category="kidswear">
+                        <span>Kids</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Categories -->
+        <section class="featured-categories" id="categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Shop by Category</h2>
+                    <p>Explore our curated collections</p>
+                </div>
+                <div class="categories-grid">
+                    <a href="#shop" class="category-card large" data-category="unstitched">
+                        <div class="category-image">
+                            <div class="placeholder-bg category-bg-1"></div>
+                        </div>
+                        <div class="category-overlay">
+                            <h3>Unstitched</h3>
+                            <p>Lawn, Cotton, Khaddar & Linen collections for every season</p>
+                            <span class="category-link">Shop Now →</span>
+                        </div>
+                    </a>
+                    <a href="#shop" class="category-card" data-category="ready-to-wear">
+                        <div class="category-image">
+                            <div class="placeholder-bg category-bg-2"></div>
+                        </div>
+                        <div class="category-overlay">
+                            <h3>Ready-to-Wear</h3>
+                            <p>Pre-stitched kurtas, suits & dresses</p>
+                            <span class="category-link">Shop Now →</span>
+                        </div>
+                    </a>
+                    <a href="#shop" class="category-card" data-category="western-wear">
+                        <div class="category-image">
+                            <div class="placeholder-bg category-bg-3"></div>
+                        </div>
+                        <div class="category-overlay">
+                            <h3>Western Wear</h3>
+                            <p>Trend-led tops, trousers & jackets</p>
+                            <span class="category-link">Shop Now →</span>
+                        </div>
+                    </a>
+                    <a href="#shop" class="category-card" data-category="menswear">
+                        <div class="category-image">
+                            <div class="placeholder-bg category-bg-4"></div>
+                        </div>
+                        <div class="category-overlay">
+                            <h3>Menswear</h3>
+                            <p>Shalwar kameez, kurtas & casual wear</p>
+                            <span class="category-link">Shop Now →</span>
+                        </div>
+                    </a>
+                    <a href="#shop" class="category-card" data-category="kidswear">
+                        <div class="category-image">
+                            <div class="placeholder-bg category-bg-5"></div>
+                        </div>
+                        <div class="category-overlay">
+                            <h3>Kidswear</h3>
+                            <p>Adorable styles for little ones</p>
+                            <span class="category-link">Shop Now →</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals -->
+        <section class="new-arrivals">
+            <div class="container">
+                <div class="section-header">
+                    <h2>New Arrivals</h2>
+                    <a href="#shop" class="view-all">View All →</a>
+                </div>
+                <div class="products-carousel" id="newArrivalsCarousel">
+                    <div class="products-track" id="newArrivalsTrack">
+                        <!-- Products will be injected by JS -->
+                    </div>
+                    <button class="carousel-btn prev" id="arrivalsPrev">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="15 18 9 12 15 6"/>
+                        </svg>
+                    </button>
+                    <button class="carousel-btn next" id="arrivalsNext">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sale Banner -->
+        <section class="sale-banner">
+            <div class="sale-banner-content">
+                <span class="sale-tag">Limited Time</span>
+                <h2>End of Season Sale</h2>
+                <p>Up to 50% off on selected items</p>
+                <a href="#shop" class="btn btn-primary">Shop Sale</a>
+            </div>
+            <div class="sale-banner-image">
+                <div class="placeholder-bg sale-bg"></div>
+            </div>
+        </section>
+
+        <!-- Trending Now -->
+        <section class="trending-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Trending Now</h2>
+                    <p>Most loved by our customers</p>
+                </div>
+                <div class="trending-grid" id="trendingGrid">
+                    <!-- Products will be injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Section -->
+        <section class="shop-section" id="shop">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Shop All</h2>
+                </div>
+                
+                <!-- Filter Tabs -->
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="unstitched">Unstitched</button>
+                    <button class="filter-tab" data-filter="ready-to-wear">Ready-to-Wear</button>
+                    <button class="filter-tab" data-filter="western-wear">Western Wear</button>
+                    <button class="filter-tab" data-filter="menswear">Menswear</button>
+                    <button class="filter-tab" data-filter="kidswear">Kidswear</button>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be injected by JS -->
+                </div>
+
+                <div class="load-more-container">
+                    <button class="btn btn-outline" id="loadMoreBtn">Load More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Strip -->
+        <section class="features-strip">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="1" y="3" width="15" height="13"/>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                            <circle cx="5.5" cy="18.5" r="2.5"/>
+                            <circle cx="18.5" cy="18.5" r="2.5"/>
+                        </svg>
+                        <h4>Free Shipping</h4>
+                        <p>On orders above PKR 3,000</p>
+                    </div>
+                    <div class="feature-item">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="23 4 23 10 17 10"/>
+                            <polyline points="1 20 1 14 7 14"/>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                        </svg>
+                        <h4>Easy Returns</h4>
+                        <p>15-day return policy</p>
+                    </div>
+                    <div class="feature-item">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                            <line x1="1" y1="10" x2="23" y2="10"/>
+                        </svg>
+                        <h4>Secure Payment</h4>
+                        <p>100% secure checkout</p>
+                    </div>
+                    <div class="feature-item">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <h4>24/7 Support</h4>
+                        <p>Dedicated customer service</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <span class="section-subtitle">Our Story</span>
+                        <h2>About Rabazka</h2>
+                        <p>Founded with a passion for Pakistani textile heritage, Rabazka brings you the finest in fashion that seamlessly blends tradition with contemporary style. Our journey began with a simple vision: to make premium quality clothing accessible to everyone.</p>
+                        <p>Each piece in our collection is thoughtfully designed, keeping in mind the modern Pakistani woman, man, and child. From luxurious unstitched fabrics to trendy ready-to-wear ensembles, we curate collections that celebrate individuality while honoring our rich cultural roots.</p>
+                        <p>At Rabazka, quality is never compromised. We work with skilled artisans and use only the finest fabrics to create clothing that not only looks beautiful but feels exceptional. Our commitment to affordable luxury means you can express your personal style without breaking the bank.</p>
+                        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    </div>
+                    <div class="about-image">
+                        <div class="placeholder-bg about-bg"></div>
+                        <div class="about-image-accent"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Section -->
+        <section class="instagram-section">
+            <div class="container">
+                <div class="section-header center">
+                    <h2>@rabazka.official</h2>
+                    <p>Follow us on Instagram for style inspiration</p>
+                </div>
+                <div class="instagram-grid">
+                    <a href="#" class="instagram-item">
+                        <div class="placeholder-bg insta-bg-1"></div>
+                        <div class="instagram-overlay">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="17.5" cy="6.5" r="1.5"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="#" class="instagram-item">
+                        <div class="placeholder-bg insta-bg-2"></div>
+                        <div class="instagram-overlay">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="17.5" cy="6.5" r="1.5"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="#" class="instagram-item">
+                        <div class="placeholder-bg insta-bg-3"></div>
+                        <div class="instagram-overlay">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="17.5" cy="6.5" r="1.5"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="#" class="instagram-item">
+                        <div class="placeholder-bg insta-bg-4"></div>
+                        <div class="instagram-overlay">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="17.5" cy="6.5" r="1.5"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <span class="section-subtitle">Get in Touch</span>
+                        <h2>Contact Us</h2>
+                        <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                <div>
+                                    <h4>Visit Us</h4>
+                                    <p>123 Fashion Street, Gulberg III<br>Lahore, Pakistan</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                <div>
+                                    <h4>Call Us</h4>
+                                    <p>+92 42 1234 5678</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                <div>
+                                    <h4>Email Us</h4>
+                                    <p>hello@rabazka.pk</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" name="subject" required>
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <span class="error-message"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                            <div class="form-status" id="formStatus"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <div class="product-detail">
+                <div class="product-detail-gallery">
+                    <div class="main-image" id="modalMainImage">
+                        <div class="placeholder-bg"></div>
+                    </div>
+                    <div class="thumbnail-list" id="modalThumbnails">
+                        <button class="thumbnail active">
+                            <div class="placeholder-bg"></div>
+                        </button>
+                        <button class="thumbnail">
+                            <div class="placeholder-bg"></div>
+                        </button>
+                        <button class="thumbnail">
+                            <div class="placeholder-bg"></div>
+                        </button>
+                        <button class="thumbnail">
+                            <div class="placeholder-bg"></div>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-detail-info">
+                    <span class="product-category" id="modalCategory">Category</span>
+                    <h2 class="product-title" id="modalTitle">Product Name</h2>
+                    <p class="product-price" id="modalPrice">PKR 0</p>
+                    <p class="product-description" id="modalDescription">
+                        Product description goes here...
+                    </p>
+                    <div class="size-selection">
+                        <label>Size:</label>
+                        <div class="size-options" id="modalSizes">
+                            <button class="size-btn" data-size="XS">XS</button>
+                            <button class="size-btn active" data-size="S">S</button>
+                            <button class="size-btn" data-size="M">M</button>
+                            <button class="size-btn" data-size="L">L</button>
+                            <button class="size-btn" data-size="XL">XL</button>
+                        </div>
+                    </div>
+                    <div class="quantity-selection">
+                        <label>Quantity:</label>
+                        <div class="quantity-control">
+                            <button class="qty-btn minus" id="qtyMinus">-</button>
+                            <input type="number" value="1" min="1" max="10" id="qtyInput">
+                            <button class="qty-btn plus" id="qtyPlus">+</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-full add-to-cart-modal" id="addToCartModal">
+                        Add to Cart
+                    </button>
+                    <div class="product-meta">
+                        <p><strong>SKU:</strong> <span id="modalSku">RBZ-001</span></p>
+                        <p><strong>Fabric:</strong> <span id="modalFabric">Premium Cotton</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-overlay" id="cartOverlay"></div>
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button class="cart-close" id="cartClose">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be injected by JS -->
+                <div class="cart-empty">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <path d="M16 10a4 4 0 0 1-8 0"/>
+                    </svg>
+                    <p>Your cart is empty</p>
+                    <a href="#shop" class="btn btn-outline">Continue Shopping</a>
+                </div>
+            </div>
+            <div class="cart-footer" id="cartFooter">
+                <div class="cart-subtotal">
+                    <span>Subtotal</span>
+                    <span id="cartSubtotal">PKR 0</span>
+                </div>
+                <p class="cart-note">Shipping & taxes calculated at checkout</p>
+                <button class="btn btn-primary btn-full">Checkout</button>
+                <a href="#shop" class="btn btn-outline btn-full">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">RABAZKA</a>
+                    <p>Redefining everyday style with premium Pakistani fashion that blends tradition with contemporary design.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Pinterest">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0a12 12 0 0 0-4.37 23.17c-.1-.94-.2-2.38.04-3.4l1.42-6.02s-.36-.73-.36-1.8c0-1.69.98-2.95 2.2-2.95 1.04 0 1.54.78 1.54 1.71 0 1.04-.66 2.6-1 4.04-.29 1.2.6 2.18 1.78 2.18 2.13 0 3.77-2.25 3.77-5.5 0-2.87-2.06-4.88-5.01-4.88-3.41 0-5.42 2.56-5.42 5.21 0 1.03.4 2.14.89 2.74.1.12.11.22.08.34l-.33 1.36c-.05.22-.18.27-.41.16-1.55-.72-2.52-2.98-2.52-4.8 0-3.9 2.84-7.49 8.18-7.49 4.3 0 7.64 3.06 7.64 7.15 0 4.27-2.69 7.7-6.43 7.7-1.26 0-2.44-.65-2.84-1.42l-.77 2.95c-.28 1.07-1.04 2.42-1.55 3.24A12 12 0 1 0 12 0z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 0 0 .5 6.19 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.81 3.02 3.02 0 0 0 2.12 2.14c1.84.55 9.38.55 9.38.55s7.54 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.81zM9.55 15.5V8.5l6.27 3.5-6.27 3.5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#shop" data-category="unstitched">Unstitched</a></li>
+                        <li><a href="#shop" data-category="ready-to-wear">Ready-to-Wear</a></li>
+                        <li><a href="#shop" data-category="western-wear">Western Wear</a></li>
+                        <li><a href="#shop" data-category="menswear">Menswear</a></li>
+                        <li><a href="#shop" data-category="kidswear">Kidswear</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Enter your email" id="newsletterEmail" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <div class="newsletter-status" id="newsletterStatus"></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rabazka. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Shipping Info</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
